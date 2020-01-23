@@ -1,4 +1,4 @@
-package com.gao.ventas.entities;
+package com.gao.ventas.model.entities;
 
 import java.io.Serializable;
 

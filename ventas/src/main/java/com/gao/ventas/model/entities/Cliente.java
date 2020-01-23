@@ -1,11 +1,34 @@
-package com.gao.ventas.entities;
+package com.gao.ventas.model.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "clientes")
 public class Cliente implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private Integer id;
+	
+	@Column
 	private String apellido;
+	
+	@Column
 	private String nombre;
+	
+	@Column
 	private long dni;
 	
 	public Cliente() {
